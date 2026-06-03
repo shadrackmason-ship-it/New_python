@@ -30,11 +30,14 @@ def main():
 
         elif choice == "2":
 
+            if len(tasks) == 0:
+                continue
+
             try:
                 index = int(input("Enter task index: "))
                 mark_task_as_complete(index)
             except ValueError:
-                pass
+                continue
 
         elif choice == "3":
 
@@ -51,6 +54,7 @@ def main():
             break
 
         else:
+
             print("Invalid choice. Please try again.")
 
 

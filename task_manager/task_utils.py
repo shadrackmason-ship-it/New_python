@@ -47,14 +47,14 @@ def view_pending_tasks(tasks=tasks):
 
     for i, task in enumerate(tasks):
 
-        if task["completed"] is False:
+        if not task["completed"]:
 
             found = True
 
             print(f"\nTask {i}")
-            print("Title:", task["title"])
-            print("Description:", task["description"])
-            print("Due Date:", task["due_date"])
+            print(f"Title: {task['title']}")
+            print(f"Description: {task['description']}")
+            print(f"Due Date: {task['due_date']}")
 
     if not found:
         print("No pending tasks")

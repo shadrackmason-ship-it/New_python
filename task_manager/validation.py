@@ -21,7 +21,7 @@ def validate_task_description(description):
 
 def validate_due_date(due_date):
 
-    if len(due_date) == 0:
+    if len(due_date) == 0 or due_date.strip() == "":
         print("Error: Due date cannot be empty.")
         return False
 
